@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--
+    Name: Blake Shucart
+    Pawprint:bs4w9
+    Date:1/28/21
+    Challenge:Columns S21
+-->
+<!--
+    Color Palette:
+        #A8A7A7
+        #CC527A
+        *#E8175D*
+        #474747
+        #363636
+-->
+<!-- code from Optional zoom lecture -->
+<html lang="en">
+    <head>
+        <title>BS4W9 Columns</title>
+        <meta charset="utf-8">
+        
+        
+        <link rel="stylesheet" href="./stylesheets/Bs4w9NavBarStylesheet.css">
+        <!-- some styling code from Optional zoom lecture -->
+        <style>
+            
+            
+            
+            .mainWrapper { /*done*/
+                
+                border: 9px solid #363636;
+                
+                border-radius: 20px;
+                
+                /* Went to TA office hours and was told to use this and not float: left in the mainwrapper, code found on https://stackoverflow.com/questions/8701054/how-to-center-a-wrapper-div-and-not-the-content */
+                
+                
+                width: 1122px;
+                
+                padding: 10px;  
+                background-color: #CC527A;
+                
+                
+            }
+            
+            
+            #skills {/*done*/
+                text-align: center;
+                
+                
+            }
+            
+            /*
+                244px (left content width)
+            +   12px (6 left + 6 right border)
+            +   42px (21 left + 21 right padding)
+            +   42px (21 left + 21 right margin)
+            ________________________________________
+            =   340px (left physical width)
+        
+            */
+            
+            .leftColumn {
+                border: 6px solid #363636;
+                border-radius: 10px;
+                background-color: #A8A7A7;
+                
+                width: 244px;
+                height: 425px;
+                padding: 21px;
+                margin: 21px;
+                
+                float: left;
+            }
+            
+            /*
+                435px (middle content width)
+            +   42px (21 left + 21 right margin)
+            __________________________________________
+            =   477px (total physical width middle)
+        
+            */
+            
+            .rowWrapper {/*done*/
+                width: 435px;
+                margin: 21px;
+                
+                float: left;
+            }
+            .topRow {
+                border: 6px solid #363636;
+                border-radius: 10px;
+                background-color: #A8A7A7;
+                
+                height: 211px;
+                width: 376px;
+                padding: 22px;
+                
+                
+            
+            }
+            .bottomRow {
+                border: 6px solid #363636;
+                border-radius: 10px;
+                background-color: #A8A7A7;
+                
+                height: 130px;
+                width: 376px;
+                padding: 22px;
+                margin-top: 26px;
+                
+            }
+            /*
+                X (content width right)
+            +   12px (6 left + 6 right border)
+            +   42px (21 left + 21 right padding)
+            +   42px(21 left + 21 right margin)
+            ____________________________________
+            = X+96px
+            
+            340px(left physical)+477px(middle physical)+X+96px=1122px
+            
+            X = 209px 
+            
+            *see body for real calulation
+            
+        
+            */
+            
+            .rightColumn {
+                border: 6px solid #363636;
+                border-radius: 10px;
+                background-color: #A8A7A7;
+                
+                width: 209px; 
+                height: 425px;
+                padding: 21px;
+                margin: 21px;
+                
+                float: left;
+            }
+            
+            
+            
+            
+            .clearHack:after {
+                clear: both;
+                content: "";
+                display: table;
+            }
+            
+            
+            
+            .uLine {
+                border-bottom: 2px solid #363636;
+                
+            }
+            
+            li {
+                padding: 7px;
+            }
+            
+        </style>
+    </head>
+    <body class="whole">
+        <div id="navbar">
+            <a class="navtab animate" href="BS4W9PortfolioS21.html">Blake Shucart</a>
+            <a class="navtab">|</a>
+            <a class="navtab animate" id="currentTab" href="BS4W9ColumnsS21.html">Skills</a>
+            <a class="navtab">|</a>
+            <a class="navtab animate" href="Bs4w9TablesS21.html">Courses</a>
+            <a class="navtab">|</a>
+            <a class="navtab animate" href="Bs4w9ProjectsS21.html">Projects</a>
+
+        </div>
+        <!-- Main wrapper. This div should wrap all columns, row wrapper, and title header -->
+        <div class="mainWrapper clearHack divCenter cardsBoxShadow">
+            <h1 id="skills">Skills</h1>
+            <!-- Left Column -->
+            <!-- Put left column physical width calculations here: 
+                
+                    244px (left content width)
+            +   12px (6 left + 6 right border)
+            +   42px (21 left + 21 right padding)
+            +   42px (21 left + 21 right margin)
+            ________________________________________
+            =   340px (left physical width)
+        
+            -->
+            <div class="leftColumn">
+                <h3 class="uLine">Courses</h3>
+                <ul>
+                    <li>Intro to Problem Solving and Programming</li>
+                    <li>Intro to Digital Media Design</li>
+                    <li>Cyber Security</li>
+                    <li>Programming Languages and Paradigms</li>
+                    <li>Calculus I</li>
+                    <li>Databas Systems and Applications</li>
+                    <li>Web Application Development I</li>
+                    <li>Audio Engineering</li>
+                </ul>
+                
+            </div>
+            
+            <!-- Row Wrapper. This div will contain two rows -->
+            <!--Put middle column physical width calculations here:
+
+                435px (middle content width)
+            +   42px (21 left + 21 right margin)
+            __________________________________________
+            =   477px (total physical width middle)
+
+            -->
+            <div class="rowWrapper">
+                <div class="topRow">
+                    <h3 class="uLine">Languages</h3>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>C#</li>
+                        <li>Python</li>
+                        <li>MySQL</li>
+                        <li>Swift</li>
+                    </ul>
+                </div>
+                
+                <div class="bottomRow">
+                    <h3 class="uLine">Work Experience</h3>
+                    <ul>
+                        <li>UMSystem Help Desk</li>
+                        <li>TigerTech Service Desk</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <!--Put right column physical width calculations here: 
+
+                209px (content width right)
+            +   12px (6 left + 6 right border)
+            +   42px (21 left + 21 right padding)
+            +   42px(21 left + 21 right margin)
+            ____________________________________
+            =   305px (right total physical width)
+            
+            -->
+            <div class="rightColumn">
+                <h3 class="uLine">Activities</h3>
+                <ul >
+                    <li>PC Building</li>
+                    <li>Biking</li>
+                    <li>Bouldering</li>
+                    <li>Playing Guitar</li>
+                    <li>Reading</li>
+                        
+                </ul>
+            </div>
+            
+            
+        </div>
+        <h2 id="dateTag">Last  updated by  Blake Shucart  with  Bs4w9 at: 2/5/21 </h2>
+    </body>
+</html>
